@@ -28,19 +28,20 @@ function upload(email) {
       email: name,
       url: url
     });
-
+  toastr.remove();
   toastr.success('Image Uploaded!', 'Go to gallery to see the images')
   document.getElementById('email').value = "";
 
     //document.querySelector('#someImageTagID').src = url;
   }).catch((error) => {
+    toastr.error('Failed, Please try again!')
     console.error(error);
   });
 }
 
 let emailid = "";
 $( "#upload" ).click(function() {
-
+  toastr.warning('Uploading image, Please wait!');
   emailid = document.getElementById('email').value;
   upload(emailid);
 });
