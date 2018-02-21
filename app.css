@@ -1,0 +1,15 @@
+body,html{
+  height: 100%;
+  width: 100%;
+  padding-top: 25px;
+}
+.card {
+  text-align: left;
+}
+
+.btn-success{
+margin-top: 20px;
+}
+.btn-alert{
+margin-left: 20px;
+}
